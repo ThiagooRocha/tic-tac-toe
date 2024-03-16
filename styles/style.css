@@ -39,7 +39,7 @@
   width: min-content;
   height: min-content;
   position: fixed;
-  bottom: 12%;
+  bottom: 8%;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -54,8 +54,10 @@
   border-radius: 5px;
   background-color: var(--main-orange);
   font-family: inherit;
-  padding: 4px 12px;
+  padding: 4px 24px;
+  font-size: 18px;
   transition: all 0.2s;
+  color: var(--text-color);
 }
 
 .box-btn::after {

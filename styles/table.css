@@ -80,7 +80,14 @@
 
 /* #endregion */
 
-@media screen and (max-width: 280px) {
+
+@media screen and (max-width: 580px) {
+  .table__wrappler {
+    transform: translate(-50%, -35%);
+  }
+}
+
+@media screen and (max-width: 380px) {
   .table__column__row {
     width: 75px;
     height: 75px;
