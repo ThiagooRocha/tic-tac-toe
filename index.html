@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bungee&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <script src="./main.js" defer></script>
+    <title>TIC TAC TOE</title>
+  </head>
+  <body class="page">
+
+    <header class="header">
+      <div class="player-box player--X">
+        <div class="player__score player-X-score">2</div>
+        <strong class="player__icon player-X-icon">X</strong>
+        <span class="player__name">Thiagoo</span>
+      </div>
+
+      <div class="player-box player--O">
+        <div class="player__score player-O-score">3</div>
+        <strong class="player__icon player-O-icon">O</strong>
+        <span class="player__name">Rafaela</span>
+      </div>
+    </header>
+
+    <main class="table">
+      <div class="table__wrappler">
+        <div class="table__column">
+          <div class="table__column__row" data-checked="false"></div>
+          <div class="table__column__row" data-checked="false"></div>
+          <div class="table__column__row" data-checked="false"></div>
+        </div>
+
+        <div class="table__column">
+          <div class="table__column__row" data-checked="false"></div>
+          <div class="table__column__row" data-checked="false"></div>
+          <div class="table__column__row" data-checked="false"></div>
+        </div>
+
+        <div class="table__column">
+          <div class="table__column__row" data-checked="false"></div>
+          <div class="table__column__row" data-checked="false"></div>
+          <div class="table__column__row" data-checked="false"></div>
+        </div>
+      </div>
+
+      <div class="box-btn">
+        <button class="btn-reset">Reset</button>
+      </div>
+    </main>
+  </body>
+</html>

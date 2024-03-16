@@ -1,0 +1,88 @@
+.table__wrappler {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.table__column {
+  display: flex;
+}
+
+.table__column__row {
+  cursor: pointer;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0px;
+
+  transition: all 0.2s;
+}
+
+/* #region table column 1 */
+.table__column:nth-child(1) .table__column__row:nth-child(1) {
+  border-bottom: 8px solid var(--dark-orange);
+  border-right: 8px solid var(--dark-orange);
+}
+
+.table__column:nth-child(1) .table__column__row:nth-child(2) {
+  border-bottom: 8px solid var(--dark-orange);
+  border-left: 8px solid var(--dark-orange);
+  border-right: 8px solid var(--dark-orange);
+}
+.table__column:nth-child(1) .table__column__row:nth-child(3) {
+  border-bottom: 8px solid var(--dark-orange);
+  border-left: 8px solid var(--dark-orange);
+}
+
+/* #endregion */
+
+/* #region table column 2 */
+.table__column:nth-child(2) .table__column__row:nth-child(1) {
+  border-top: 8px solid var(--dark-orange);
+  border-bottom: 8px solid var(--dark-orange);
+  border-right: 8px solid var(--dark-orange);
+}
+
+.table__column:nth-child(2) .table__column__row:nth-child(2) {
+  border-top: 8px solid var(--dark-orange);
+  border-bottom: 8px solid var(--dark-orange);
+  border-left: 8px solid var(--dark-orange);
+  border-right: 8px solid var(--dark-orange);
+}
+
+.table__column:nth-child(2) .table__column__row:nth-child(3) {
+  border-top: 8px solid var(--dark-orange);
+  border-bottom: 8px solid var(--dark-orange);
+  border-left: 8px solid var(--dark-orange);
+}
+
+/* #endregion */
+
+/* #region table column 3 */
+.table__column:nth-child(3) .table__column__row:nth-child(1) {
+  border-top: 8px solid var(--dark-orange);
+  border-right: 8px solid var(--dark-orange);
+}
+
+.table__column:nth-child(3) .table__column__row:nth-child(2) {
+  border-top: 8px solid var(--dark-orange);
+  border-left: 8px solid var(--dark-orange);
+  border-right: 8px solid var(--dark-orange);
+}
+
+.table__column:nth-child(3) .table__column__row:nth-child(3) {
+  border-top: 8px solid var(--dark-orange);
+  border-left: 8px solid var(--dark-orange);
+}
+
+/* #endregion */
+
+@media screen and (max-width: 280px) {
+  .table__column__row {
+    width: 75px;
+    height: 75px;
+  }
+}
