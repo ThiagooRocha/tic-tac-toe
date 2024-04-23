@@ -1,5 +1,5 @@
 .header {
-  padding: 40px;
+  padding-top: 90px;
   width: 100%;
   display: flex;
   align-items: center;
@@ -13,8 +13,6 @@
   max-width: 200px;
   height: 60px;
 
-  border-radius: 5px;
-
   display: flex;
   align-items: center;
   justify-content: center;
@@ -22,16 +20,17 @@
   transform: rotate(-3deg) scale(1.3);
   transition: all 0.2s;
   z-index: 100;
+
+  border: 2px solid var(--dark-orange);
+  border-radius: 5px;
 }
 
 .player--X {
   background-color: var(--main-orange);
-  border: 2px solid var(--dark-orange);
 }
 
 .player--O {
   background-color: var(--secondary-orange);
-  border: 2px solid var(--dark-orange);
 }
 
 .player__icon {
@@ -72,6 +71,7 @@
   align-items: center;
   justify-content: center;
   transition: border 0.2s;
+  overflow: hidden;
 }
 
 .player-X-score {
@@ -82,22 +82,14 @@
   background-color: var(--main-orange);
 }
 
-.player--disabled {
-  background-color: var(--secondary-gray);
-  border: 2px solid var(--main-gray);
-  color: var(--main-gray);
-  transform: rotate(0deg) scale(1);
-  z-index: 0;
+.draw__container {
+  position: fixed;
+  top: 2%;
+  visibility: hidden;
 }
 
-.score--disabled {
-  background-color: var(--secondary-gray);
-  border: 2px solid var(--main-gray);
-  color: var(--main-gray);
-}
-
-.icon--disabled {
-  border-right: 2px solid var(--main-gray);
+.draw__container-text {
+  font-size: 22px;
 }
 
 @media screen and (max-width: 530px) {

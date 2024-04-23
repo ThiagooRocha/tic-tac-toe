@@ -6,6 +6,7 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 :root {
   --bg-color: #fff7ed;
   --text-color: #292524;
@@ -80,4 +81,145 @@
 .square--O {
   color: var(--secondary-orange);
   font-size: 60px;
+}
+
+.square--disabled {
+  cursor: none;
+  pointer-events: none;
+};
+
+.score--disabled {
+  background-color: var(--secondary-gray);
+  border: 2px solid var(--main-gray);
+  color: var(--main-gray);
+}
+
+.player--disabled {
+  background-color: var(--secondary-gray);
+  border: 2px solid var(--main-gray);
+  color: var(--main-gray);
+  transform: rotate(0deg) scale(1);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.player--X.player--disabled .player-X-score {
+  background-color: var(--secondary-gray);
+  border: 2px solid var(--main-gray);
+  color: var(--main-gray);
+}
+
+.player--O.player--disabled .player-O-score {
+  background-color: var(--secondary-gray);
+  border: 2px solid var(--main-gray);
+  color: var(--main-gray);
+}
+
+.icon--disabled {
+  border-right: 2px solid var(--main-gray);
+}
+
+.vissible {
+  visibility: visible;
+}
+
+
+.row-line::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  height: 10px;
+  background-color:  var(--main-orange);
+  animation: animate-rowLine .2s ease-in-out forwards;
+}
+
+.column-line::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 10px;
+  background-color: var(--main-orange);
+  animation: animate-columnLine .2s ease-in-out forwards;
+}
+
+.diagonalLeft-line::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 10px;
+  background-color: var(--main-orange);
+  transform: rotate(44deg);
+  transform-origin: left;
+  animation: animate-diagonalLine .2s ease-in-out forwards;
+}
+
+.diagonalRight-line::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 10px;
+  background-color: var(--main-orange);
+  transform: rotate(316deg);
+  transform-origin: right;
+  animation: animate-diagonalLine .2s ease-in-out forwards;
+}
+
+
+.player--winner::before {
+  content: "VENCEDOR ✨";
+  font-size: 20px;
+  position: absolute;
+  top: -85%;
+  left: 14%;
+  text-wrap: nowrap;
+  z-index: 100;
+}
+
+.lightBeam::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -20px;
+  width: 20px;
+  height: 100%;
+  background: linear-gradient(to bottom right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0) 100%);
+  animation: lightBeam 1s cubic-bezier(.19,.61,.86,.64) infinite;
+}
+
+@keyframes lightBeam {
+  0% {
+    left: -20px;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+@keyframes animate-rowLine {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes animate-columnLine {
+  from {
+    height: 0%;
+  }
+  to {
+    height: 100%;
+  }
+}
+
+@keyframes animate-diagonalLine {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 138%;
+  }
 }
