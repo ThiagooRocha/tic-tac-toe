@@ -1,0 +1,44 @@
+.footer {
+    width: 100%;
+    padding-block: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.box-btn {
+  width: min-content;
+  height: min-content;
+  border-radius: 5px;
+  background-color: var(--dark-orange);
+}
+
+.box-btn:hover .btn-reset {
+  transform: translate(3px, -3px);
+}
+
+.btn-reset {
+  cursor: pointer;
+  border: 2px solid var(--dark-orange);
+  border-radius: 5px;
+  background-color: var(--main-orange);
+  font-family: inherit;
+  padding: 4px 24px;
+  font-size: 18px;
+  transition: all 0.2s;
+  color: var(--text-color);
+}
+
+.github-icon {
+  cursor: pointer;
+  position: absolute;
+  right: 10%;
+  width: 30px;
+  height: 30px;
+  overflow: hidden;
+}
+
+.github-icon img {
+  border-radius: 5px;
+  max-width: 100%;
+}

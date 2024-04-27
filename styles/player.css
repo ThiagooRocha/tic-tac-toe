@@ -1,12 +1,3 @@
-.header {
-  padding-top: 90px;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 90px;
-}
-
 .player-box {
   position: relative;
   width: min-content;
@@ -82,19 +73,14 @@
   background-color: var(--main-orange);
 }
 
-.draw__container {
-  position: fixed;
-  top: 2%;
-  visibility: hidden;
-}
+@media screen and (max-width: 380px) {
+  .player-box {
+    height: 45px;
+  };
 
-.draw__container-text {
-  font-size: 22px;
-}
-
-@media screen and (max-width: 530px) {
-  .header {
-    flex-direction: column;
-    gap: 24px;
+  .player__score {
+    width: 25px;
+    height: 25px;
   }
+
 }

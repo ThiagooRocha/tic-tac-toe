@@ -1,5 +1,7 @@
+@import "./header.css";
 @import "./player.css";
 @import "./table.css";
+@import "./footer.css";
 
 * {
   margin: 0;
@@ -18,9 +20,16 @@
   --secondary-purple: #818cf8;
   --main-gray: #a3a3a3;
   --secondary-gray: #d4d4d4;
+
+  --header-height: 150px;
+  --footer-height: 93px;
 }
 
 .page {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
   width: 100%;
   height: 100vh;
   background-color: var(--bg-color);
@@ -34,43 +43,6 @@
   -moz-user-select: none; /* Firefox */
   -ms-user-select: none; /* IE 10+/Edge */
   user-select: none; /* padrão */
-}
-
-.box-btn {
-  width: min-content;
-  height: min-content;
-  position: fixed;
-  bottom: 8%;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.box-btn:hover .btn-reset {
-  transform: translate(3px, -3px);
-}
-
-.btn-reset {
-  cursor: pointer;
-  border: 2px solid var(--dark-orange);
-  border-radius: 5px;
-  background-color: var(--main-orange);
-  font-family: inherit;
-  padding: 4px 24px;
-  font-size: 18px;
-  transition: all 0.2s;
-  color: var(--text-color);
-}
-
-.box-btn::after {
-  content: "";
-  position: absolute;
-  left: 0px;
-  bottom: 0px;
-  z-index: -10;
-  border-radius: 5px;
-  background-color: var(--dark-orange);
-  width: 100%;
-  height: 100%;
 }
 
 .square--X {
@@ -127,6 +99,7 @@
 .row-line::after {
   content: "";
   position: absolute;
+  z-index: 1;
   left: 0;
   height: 10px;
   background-color:  var(--main-orange);
@@ -136,6 +109,7 @@
 .column-line::after {
   content: "";
   position: absolute;
+  z-index: 1;
   top: 0;
   width: 10px;
   background-color: var(--main-orange);
@@ -145,6 +119,7 @@
 .diagonalLeft-line::after {
   content: "";
   position: absolute;
+  z-index: 1;
   top: 0;
   left: 0;
   height: 10px;
@@ -157,6 +132,7 @@
 .diagonalRight-line::after {
   content: "";
   position: absolute;
+  z-index: 1;
   top: 0;
   right: 0;
   height: 10px;
@@ -202,7 +178,7 @@
     width: 0%;
   }
   to {
-    width: 100%;
+    width: calc(100px * 3);
   }
 }
 
@@ -211,7 +187,7 @@
     height: 0%;
   }
   to {
-    height: 100%;
+    height: calc(100px * 3);
   }
 }
 
@@ -220,6 +196,39 @@
     width: 0%;
   }
   to {
-    width: 138%;
+    width: 417px;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .player--winner::before {
+    top: -100%;
+  }
+
+  @keyframes animate-rowLine {
+    from {
+      width: 0%;
+    }
+    to {
+      width: calc(75px * 3);
+    }
+  }
+  
+  @keyframes animate-columnLine {
+    from {
+      height: 0%;
+    }
+    to {
+      height: calc(75px * 3);
+    }
+  }
+  
+  @keyframes animate-diagonalLine {
+    from {
+      width: 0%;
+    }
+    to {
+      width:  305px;
+    }
   }
 }
